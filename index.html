@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <!-- <link href="GOOGLE FONTS" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1 class="text-center">QALENDAR DAY SCHEDULER</h1>
+                <div  class="text-center">
+                    <span>A simple calendar app for scheduling your day</span>
+                </div> 
+                <div id="clock" class="clock text-center"></div>
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-around">
+                <div class="col border bg-light time-box">
+                    <h2 class="time-text">9am</h2>
+                </div>
+                <div class="col-8 border taskEl 9">
+                    <textarea id="list-toDo" class="list-group"></textarea>                  
+                </div>
+                <div class="col border bg-info save-box">
+                    <button id="save" class="btn btn-info oi oi-clipboard"></button>
+                </div>
+            </div> 
+            <div class="row justify-content-around">
+                <div class="col border bg-light time-box">
+                    <h2 class="time-text">10am</h2>
+                </div>
+                <div class="col-8 border taskEl 10">
+                    <textarea id="list-toDo" class="list-group"></textarea>                    
+                </div>
+                <div class="col border bg-info save-box">
+                    <button id="save" class="btn btn-info oi oi-clipboard"></button>                </div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col border bg-light time-box">
+                    <h2 class="time-text">11am</h2>
+                </div>
+                <div class="col-8 border taskEl 11">
+                    <textarea id="list-toDo" class="list-group"></textarea>                     
+                </div>
+                <div class="col border bg-info save-box">
+                    <button id="save" class="btn btn-info oi oi-clipboard"></button>                </div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col border bg-light time-box">
+                    <h2 class="time-text">12pm</h2>
+                </div>
+                <div class="col-8 border taskEl 12">
+                    <textarea id="list-toDo" class="list-group"></textarea>                    
+                </div>
+                <div class="col border bg-info save-box">
+                    <button id="save" class="btn btn-info oi oi-clipboard"></button>                </div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col border bg-light time-box">
+                    <h2 class="time-text">1pm</h2>
+                </div>
+                <div class="col-8 border taskEl 13">
+                    <textarea id="list-toDo" class="list-group"></textarea>                    
+                </div>
+                <div class="col border bg-info save-box">
+                    <button id="save" class="btn btn-info oi oi-clipboard"></button>                </div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col border bg-light time-box">
+                    <h2 class="time-text">2pm</h2>
+                </div>
+                <div class="col-8 border taskEl 14">
+                    <textarea id="list-toDo" class="list-group"></textarea>                    
+                </div>
+                <div class="col border bg-info save-box">
+                    <button id="save" class="btn btn-info oi oi-clipboard"></button>                </div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col border bg-light time-box">
+                    <h2 class="time-text">3pm</h2>
+                </div>
+                <div class="col-8 border taskEl 15">
+                    <textarea id="list-toDo" class="list-group"></textarea>                     
+                </div>
+                <div class="col border bg-info save-box">
+                    <button id="save" class="btn btn-info oi oi-clipboard"></button>                </div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col border bg-light time-box">
+                    <h2 class="time-text">4pm</h2>
+                </div>
+                <div class="col-8 border taskEl 16">
+                    <textarea id="list-toDo" class="list-group"></textarea>                     
+                </div>
+                <div class="col border bg-info save-box">
+                    <button id="save" class="btn btn-info oi oi-clipboard"></button>                </div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col border bg-light time-box">
+                    <h2 class="time-text">5pm</h2>
+                </div>
+                <div class="col-8 border taskEl 17">
+                    <textarea id="list-toDo" class="list-group"></textarea>                     
+                </div>
+                <div class="col border bg-info save-box">
+                    <button id="save" class="btn btn-info oi oi-clipboard"></button>                </div>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
