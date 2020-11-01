@@ -27,9 +27,10 @@ checkStorage();
 
 
 var saveTasks = function () {
-  localStorage.setItem("tasks", JSON.stringify(textInput));
+  localStorage.setItem("tasks", );
 };
 
+// click textarea
 $(".taskEl").on("click", "p", function () {
   console.log("p was clicked");
   var text = $(this).text().trim();
@@ -49,11 +50,10 @@ $(".list-group").on("blur", "textarea", function () {
 });
 
 $("button").on("click", function() {
+  var saveText = text;
+  console.log(saveText);
   saveTasks();
 });
-// create a variable for each time of day
-
-// repeat this for all times^
 
 var time1 = moment(currentTime, "L").set("hour", 9);
 var time2 = moment(currentTime, "L").set("hour", 10);
