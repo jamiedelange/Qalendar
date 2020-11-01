@@ -29,57 +29,49 @@ $(".taskEl").on("click", "p", function () {
   var textInput = $("<textarea>").addClass("form-control").val(text);
   $(this).replaceWith(textInput);
   textInput.trigger("focus");
-  console.log(textInput);
 });
 
-function textArea() {
-$(".list-group").on("blur", "textarea", function () {
-  // get textarea's current value/text
-  var text = $(this).val().trim();
-  console.log(text);
+
+
+
+
+
+$("#9button").on("click", function() {
+  var text = $("#9text").val().trim();
+  localStorage.setItem("9", text);
 });
-};
-
-console.log(textArea());
-
-
-  $("#9button").on("click", function() {
-    var text = $("#9text").val().trim();
-    localStorage.setItem("9", text);
-    console.log(text);
-  });
-  $("#10button").on("click", function() {
-    var text = $("#10text").val().trim();
-    localStorage.setItem("10", text);  
-  });
-  $("#11button").on("click", function() {
-    var text = $("#11text").val().trim();
-    localStorage.setItem("11", text);
-  });
-  $("#12button").on("click", function() {
-    var text = $("#12text").val().trim();
-    localStorage.setItem("12", text);
-  });
-  $("#13button").on("click", function() {
-    var text = $("#13text").val().trim();
-    localStorage.setItem("13", text);
-  });
-  $("#14button").on("click", function() {
-    var text = $("#14text").val().trim();
-    localStorage.setItem("14", text);
-  });
-  $("#15button").on("click", function() {
-    var text = $("#15text").val().trim();
-    localStorage.setItem("15", text);
-  });
-  $("#16button").on("click", function() {
-    var text = $("#16text").val().trim();
-    localStorage.setItem("16", text);
-  });
-  $("#17button").on("click", function() {
-    var text = $("#17text").val().trim();
-    localStorage.setItem("17", text);
-  });
+$("#10button").on("click", function() {
+  var text = $("#10text").val().trim();
+  localStorage.setItem("10", text);  
+});
+$("#11button").on("click", function() {
+  var text = $("#11text").val().trim();
+  localStorage.setItem("11", text);
+});
+$("#12button").on("click", function() {
+  var text = $("#12text").val().trim();
+  localStorage.setItem("12", text);
+});
+$("#13button").on("click", function() {
+  var text = $("#13text").val().trim();
+  localStorage.setItem("13", text);
+});
+$("#14button").on("click", function() {
+  var text = $("#14text").val().trim();
+  localStorage.setItem("14", text);
+});
+$("#15button").on("click", function() {
+  var text = $("#15text").val().trim();
+  localStorage.setItem("15", text);
+});
+$("#16button").on("click", function() {
+  var text = $("#16text").val().trim();
+  localStorage.setItem("16", text);
+});
+$("#17button").on("click", function() {
+  var text = $("#17text").val().trim();
+  localStorage.setItem("17", text);
+});
 
 
 
