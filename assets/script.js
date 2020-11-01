@@ -18,19 +18,7 @@ setInterval(update, 1000);
 
 
 
-var checkStorage = function() {
-  $("#9text").val(localStorage.getItem("9text"));
-  $("#10text").val(localStorage.getItem("10text"));
-  $("#11text").val(localStorage.getItem("11text"));
-  $("#12text").val(localStorage.getItem("12text"));
-  $("#13text").val(localStorage.getItem("13text"));
-  $("#14text").val(localStorage.getItem("14text"));
-  $("#15text").val(localStorage.getItem("15text"));
-  $("#16text").val(localStorage.getItem("16text"));
-  $("#17text").val(localStorage.getItem("17text"));
-};
-checkStorage();
-console.log(checkStorage());
+
 
 /* var saveTasks = function () {
   localStorage.setItem("tasks", text);
@@ -56,9 +44,9 @@ console.log(textArea());
 
 
   $("#9button").on("click", function() {
-    var description = $(this).siblings(".list-group").val();
-    localStorage.setItem("9", description);
-    console.log(description);
+    var text = $("#9text").val().trim();
+    localStorage.setItem("9", text);
+    console.log(text);
   });
   $("#10button").on("click", function() {
     var text = $("#10text").val().trim();
@@ -123,6 +111,19 @@ for (let i = 0; i < timeArr.length; i++) {
 }
 
 });
+
+var checkStorage = function() {
+  $("#9text").val(localStorage.getItem("9"));
+  $("#10text").val(localStorage.getItem("10"));
+  $("#11text").val(localStorage.getItem("11"));
+  $("#12text").val(localStorage.getItem("12"));
+  $("#13text").val(localStorage.getItem("13"));
+  $("#14text").val(localStorage.getItem("14"));
+  $("#15text").val(localStorage.getItem("15"));
+  $("#16text").val(localStorage.getItem("16"));
+  $("#17text").val(localStorage.getItem("17"));
+};
+checkStorage();
 
 
 /* $(document).ready(function() {
