@@ -10,23 +10,30 @@ function update() {
 }
 setInterval(update, 1000);
 
-/* var checkStorage = function() {
-  for (var i)
-} */
 
 
-// SEE WILL & JOSEPH'S SLACK MESSAGES!!!!!!!!!!!!!!!!!!!!
-
+var checkStorage = function() {
+  $(".9").val(localStorage.getItem("9"));
+  $(".10").val(localStorage.getItem("10"));
+  $(".11").val(localStorage.getItem("11"));
+  $(".12").val(localStorage.getItem("12"));
+  $(".13").val(localStorage.getItem("13"));
+  $(".14").val(localStorage.getItem("14"));
+  $(".15").val(localStorage.getItem("15"));
+  $(".16").val(localStorage.getItem("16"));
+  $(".17").val(localStorage.getItem("17"));
+};
+checkStorage();
 
 
 var saveTasks = function () {
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+  localStorage.setItem("tasks", JSON.stringify(textInput));
 };
 
 $(".taskEl").on("click", "p", function () {
   console.log("p was clicked");
   var text = $(this).text().trim();
-  var textInput = $("<textarea>"/* ???????????? */).addClass("form-control").val(text);
+  var textInput = $("<textarea>").addClass("form-control").val(text);
   $(this).replaceWith(textInput);
   textInput.trigger("focus");
 });
@@ -41,6 +48,9 @@ $(".list-group").on("blur", "textarea", function () {
   saveTasks();
 });
 
+$("button").on("click", function() {
+  saveTasks();
+});
 // create a variable for each time of day
 
 // repeat this for all times^
@@ -74,4 +84,3 @@ for (let i = 0; i < timeArr.length; i++) {
 
 
 // save to localStorage when user clicks save button
-// do the thing where it updates the page every 30 seconds
