@@ -1,7 +1,13 @@
+
+
+
 // global variables
 var tasks = {};
 var myTime = document.querySelector("#clock");
 var currentTime = moment();
+var text = $(this).text().trim();
+
+$(document).ready(function() {
 
 // display current time and date at top of page
 myTime.textContent = currentTime.format("MMMM DD, YYYY - h:mm:ss a");
@@ -13,47 +19,81 @@ setInterval(update, 1000);
 
 
 var checkStorage = function() {
-  $(".9").val(localStorage.getItem("9"));
-  $(".10").val(localStorage.getItem("10"));
-  $(".11").val(localStorage.getItem("11"));
-  $(".12").val(localStorage.getItem("12"));
-  $(".13").val(localStorage.getItem("13"));
-  $(".14").val(localStorage.getItem("14"));
-  $(".15").val(localStorage.getItem("15"));
-  $(".16").val(localStorage.getItem("16"));
-  $(".17").val(localStorage.getItem("17"));
+  $("#9text").val(localStorage.getItem("9text"));
+  $("#10text").val(localStorage.getItem("10text"));
+  $("#11text").val(localStorage.getItem("11text"));
+  $("#12text").val(localStorage.getItem("12text"));
+  $("#13text").val(localStorage.getItem("13text"));
+  $("#14text").val(localStorage.getItem("14text"));
+  $("#15text").val(localStorage.getItem("15text"));
+  $("#16text").val(localStorage.getItem("16text"));
+  $("#17text").val(localStorage.getItem("17text"));
 };
 checkStorage();
+console.log(checkStorage());
 
-
-var saveTasks = function () {
-  localStorage.setItem("tasks", );
-};
+/* var saveTasks = function () {
+  localStorage.setItem("tasks", text);
+}; */
 
 // click textarea
 $(".taskEl").on("click", "p", function () {
-  console.log("p was clicked");
-  var text = $(this).text().trim();
   var textInput = $("<textarea>").addClass("form-control").val(text);
   $(this).replaceWith(textInput);
   textInput.trigger("focus");
+  console.log(textInput);
 });
 
+function textArea() {
 $(".list-group").on("blur", "textarea", function () {
   // get textarea's current value/text
   var text = $(this).val().trim();
-  // recreate p element
-  var taskP = $("<p>").addClass("m-1").text(text);
-  //replace textarea with p element
-  $(this).replaceWith(taskP);
-  saveTasks();
+  console.log(text);
 });
+};
 
-$("button").on("click", function() {
-  var saveText = text;
-  console.log(saveText);
-  saveTasks();
-});
+console.log(textArea());
+
+
+  $("#9button").on("click", function() {
+    var description = $(this).siblings(".list-group").val();
+    localStorage.setItem("9", description);
+    console.log(description);
+  });
+  $("#10button").on("click", function() {
+    var text = $("#10text").val().trim();
+    localStorage.setItem("10", text);  
+  });
+  $("#11button").on("click", function() {
+    var text = $("#11text").val().trim();
+    localStorage.setItem("11", text);
+  });
+  $("#12button").on("click", function() {
+    var text = $("#12text").val().trim();
+    localStorage.setItem("12", text);
+  });
+  $("#13button").on("click", function() {
+    var text = $("#13text").val().trim();
+    localStorage.setItem("13", text);
+  });
+  $("#14button").on("click", function() {
+    var text = $("#14text").val().trim();
+    localStorage.setItem("14", text);
+  });
+  $("#15button").on("click", function() {
+    var text = $("#15text").val().trim();
+    localStorage.setItem("15", text);
+  });
+  $("#16button").on("click", function() {
+    var text = $("#16text").val().trim();
+    localStorage.setItem("16", text);
+  });
+  $("#17button").on("click", function() {
+    var text = $("#17text").val().trim();
+    localStorage.setItem("17", text);
+  });
+
+
 
 var time1 = moment(currentTime, "L").set("hour", 9);
 var time2 = moment(currentTime, "L").set("hour", 10);
@@ -82,5 +122,52 @@ for (let i = 0; i < timeArr.length; i++) {
   timeClass++;
 }
 
+});
 
-// save to localStorage when user clicks save button
+
+/* $(document).ready(function() {
+  // listen for save button clicks
+  $(".saveBtn").on("click", function() {
+    // get nearby values
+    var value = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
+    // save in localStorage
+    localStorage.setItem(time, value);
+  });
+  function hourUpdater() {
+    // get current number of hours
+    var currentHour = moment().hours();
+    // loop over time blocks
+    $(".time-block").each(function() {
+      var blockHour = parseInt($(this).attr("id").split("-")[1]);
+      // check if we've moved past this time
+      if (blockHour < currentHour) {
+        $(this).addClass("past");
+      } 
+      else if (blockHour === currentHour) {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+      } 
+      else {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
+      }
+    });
+  }
+  hourUpdater();
+  // set up interval to check if current time needs to be updated
+  var interval = setInterval(hourUpdater, 15000);
+  // load any saved data from localStorage
+  $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+  $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+  $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+  $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+  $("#hour-13 .description").val(localStorage.getItem("hour-13"));
+  $("#hour-14 .description").val(localStorage.getItem("hour-14"));
+  $("#hour-15 .description").val(localStorage.getItem("hour-15"));
+  $("#hour-16 .description").val(localStorage.getItem("hour-16"));
+  $("#hour-17 .description").val(localStorage.getItem("hour-17"));
+  // display current day on page
+  $("#currentDay").text(moment().format("dddd, MMMM Do"));
+}); */

@@ -1,8 +1,12 @@
+
 header {
-    padding: 30px 150px 30px 150px;
+    padding: 20px 150px 30px 150px;
+}
+body {
+    padding: 10px 120px 30px 120px;
+    background-color: #1492db;
 }
 
-body,
 h1,
 h3,
 h4,
